@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" >
     <link rel="stylesheet" href="styling.css">
-    <title>CS Insights!</title>
-    <script src="jquery-3.5.1.min.js"></script>
-
-    
+    <title>Insights</title>
 
     <!-- https://www.askpython.com/python/examples/images-into-cartoons -->
     <!-- https://www.youtube.com/watch?v=oYRda7UtuhA -->
@@ -18,47 +15,52 @@
 <body>
     <section class="header"> 
 
-         <nav>
+         <nav class="about-section">
              <!-- <a href="content.html"><img src="images/logo.jpeg"></a> -->
-             <h2><a href="#" class="logo">CSInsights!</a></h2>
+             <h2><a href="#" class="logo">Insights</a></h2>
              <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()" ></i>
                  <ul>
                      
                     <li> <a href="content.html">HOME</a></li>
                     <li> <a href="insights.html" >INSIGHTS</a></li>
-                    <li> <a href="">ABOUT US</a></li>
+                    <li> <a href="AboutPage.html">ABOUT US</a></li>
                      
                  </ul>
-             </div>
-             <i class="fa fa-bars" onclick="showMenu()"></i>
-         </nav>
-         <div class="text-box">
-            <h1 class="para-header">The below table captures number of CS degrees awarded by each University</h1>
-            <p class="para">Would you like to know how many students completed their education Computer Science and from where.
-                <br>This data is sourced from Datausa.io website</p>
-            <a href="" class="hero-btn">Like It</a>
-         </div>
-         <table>
-             <tr class="table_style">
-                 <th>Year</th>
-                 <th>University Name</th>
-                 <th>Total Degrees Awarded</th>
-
-
-             </tr>
-             <tbody id="degree_data"></tbody>
-         </table>
+                    </div> 
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                  </nav>
+                    <div class="text-box">
+                        <h1>Use this interactive table to find out about fees at different universities</h1>
+                        <p>Use filters to select a university </p>
+                    </div>
+                    
+         
+         <table class="table">
+            <tr class="table-header">
+            <th>University Name</th>
+            <th>State</th>
+            <th>Type</th>
+            <th>Duration</th>
+            <th>In-State Tuition Fee</th>
+            <th>Out-Of-State Tuition Fee</th>
+            </tr>
+            <tbody id="myTab"></tbody>
+            </table>
+   
+   
+   
+   
     </section>
-    
+
+
+
+
+
 <!-- ------Javascript for toggle  -->
 <script>
     
     var navLinks = document.getElementById("navLinks");
-
-    var cart = JSON.parse(window.localStorage.getItem()); 
-
-console.log(cart);
 
     function showMenu(){
         navLinks.style.right = "0";
@@ -70,25 +72,736 @@ console.log(cart);
     }
 
 
-    var array_data = {
-    "Sheet1 (2)": [
+
+var array = [
+
+    
         {
-            "ID University": "118912",
-            "University": "MiraCosta College",
-            "Year": "2019",
-            "Completions": "7"
+            "name": "Adventist University of Health Sciences",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 15,150 ",
+            "out_of_state_tuition": " 15,150 "
+        },
+        {
+            "name": "Ave Maria University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 20,850 ",
+            "out_of_state_tuition": " 20,850 "
+        },
+        {
+            "name": "Baptist College of Florida",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 12,300 ",
+            "out_of_state_tuition": " 12,300 "
+        },
+        {
+            "name": "Barry University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 29,850 ",
+            "out_of_state_tuition": " 29,850 "
+        },
+        {
+            "name": "Beacon College",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 39,016 ",
+            "out_of_state_tuition": " 39,016 "
+        },
+        {
+            "name": "Bethune-Cookman University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 14,814 ",
+            "out_of_state_tuition": " 14,814 "
+        },
+        {
+            "name": "Broward College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,540 ",
+            "out_of_state_tuition": " 11,190 "
+        },
+        {
+            "name": "Carlos Albizu University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 10,234 ",
+            "out_of_state_tuition": " 10,234 "
+        },
+        {
+            "name": "Chipola College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,160 ",
+            "out_of_state_tuition": " 8,990 "
+        },
+        {
+            "name": "College of Business and Technology: Flagler",
+            "state": "Florida",
+            "type": "For Profit",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 12,222 ",
+            "out_of_state_tuition": " 12,222 "
+        },
+        {
+            "name": "College of Business and Technology: Hialeah",
+            "state": "Florida",
+            "type": "For Profit",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 12,222 ",
+            "out_of_state_tuition": " 12,222 "
+        },
+        {
+            "name": "College of Business and Technology: Miami Gardens",
+            "state": "Florida",
+            "type": "For Profit",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 12,222 ",
+            "out_of_state_tuition": " 12,222 "
+        },
+        {
+            "name": "College of Central Florida",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,213 ",
+            "out_of_state_tuition": " 12,656 "
+        },
+        {
+            "name": "Daytona State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,109 ",
+            "out_of_state_tuition": " 11,998 "
+        },
+        {
+            "name": "Eastern Florida State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,140 ",
+            "out_of_state_tuition": " 12,193 "
+        },
+        {
+            "name": "Eckerd College",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 44,540 ",
+            "out_of_state_tuition": " 44,540 "
+        },
+        {
+            "name": "Edward Waters College",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 13,725 ",
+            "out_of_state_tuition": " 13,725 "
+        },
+        {
+            "name": "Embry-Riddle Aeronautical University: Daytona Beach Campus",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 35,814 ",
+            "out_of_state_tuition": " 35,814 "
+        },
+        {
+            "name": "Embry-Riddle Aeronautical University: Worldwide Campus",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 9,360 ",
+            "out_of_state_tuition": " 9,360 "
+        },
+        {
+            "name": "Everglades University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 17,145 ",
+            "out_of_state_tuition": " 17,145 "
+        },
+        {
+            "name": "Flagler College",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 18,950 ",
+            "out_of_state_tuition": " 18,950 "
+        },
+        {
+            "name": "Florida Agricultural and Mechanical University",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 5,827 ",
+            "out_of_state_tuition": " 17,768 "
+        },
+        {
+            "name": "Florida Atlantic University",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,039 ",
+            "out_of_state_tuition": " 21,595 "
+        },
+        {
+            "name": "Florida College",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 17,142 ",
+            "out_of_state_tuition": " 17,142 "
+        },
+        {
+            "name": "Florida Gateway College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,100 ",
+            "out_of_state_tuition": " 11,747 "
+        },
+        {
+            "name": "Florida Gulf Coast University",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,118 ",
+            "out_of_state_tuition": " 25,162 "
+        },
+        {
+            "name": "Florida Institute of Technology",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 41,850 ",
+            "out_of_state_tuition": " 41,850 "
+        },
+        {
+            "name": "Florida International University",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,558 ",
+            "out_of_state_tuition": " 18,956 "
+        },
+        {
+            "name": "Florida Keys Community College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,277 ",
+            "out_of_state_tuition": " 13,162 "
+        },
+        {
+            "name": "Florida Memorial University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 15,536 ",
+            "out_of_state_tuition": " 15,536 "
+        },
+        {
+            "name": "Florida National University",
+            "state": "Florida",
+            "type": "For Profit",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 13,800 ",
+            "out_of_state_tuition": " 13,800 "
+        },
+        {
+            "name": "Florida Southern College",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 36,348 ",
+            "out_of_state_tuition": " 36,348 "
+        },
+        {
+            "name": "Florida SouthWestern State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,401 ",
+            "out_of_state_tuition": " 13,944 "
+        },
+        {
+            "name": "Florida State College at Jacksonville",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,146 ",
+            "out_of_state_tuition": " 12,038 "
+        },
+        {
+            "name": "Florida State University",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,516 ",
+            "out_of_state_tuition": " 21,683 "
+        },
+        {
+            "name": "Gulf Coast State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 2,963 ",
+            "out_of_state_tuition": " 10,791 "
+        },
+        {
+            "name": "Hillsborough Community College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,132 ",
+            "out_of_state_tuition": " 11,388 "
+        },
+        {
+            "name": "Hobe Sound Bible College",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,490 ",
+            "out_of_state_tuition": " 6,490 "
+        },
+        {
+            "name": "Hodges University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 17,600 ",
+            "out_of_state_tuition": " 17,600 "
+        },
+        {
+            "name": "Indian River State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,115 ",
+            "out_of_state_tuition": " 11,715 "
+        },
+        {
+            "name": "Jacksonville University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 36,670 ",
+            "out_of_state_tuition": " 36,670 "
+        },
+        {
+            "name": "Johnson & Wales University: North Miami",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 32,091 ",
+            "out_of_state_tuition": " 32,091 "
+        },
+        {
+            "name": "Johnson University: Florida",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 16,060 ",
+            "out_of_state_tuition": " 16,060 "
+        },
+        {
+            "name": "Keiser University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 29,920 ",
+            "out_of_state_tuition": " 29,920 "
+        },
+        {
+            "name": "Key College",
+            "state": "Florida",
+            "type": "For Profit",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 11,085 ",
+            "out_of_state_tuition": " 11,085 "
+        },
+        {
+            "name": "Lake-Sumter State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,172 ",
+            "out_of_state_tuition": " 13,276 "
+        },
+        {
+            "name": "Lynn University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 38,210 ",
+            "out_of_state_tuition": " 38,210 "
+        },
+        {
+            "name": "Miami Dade College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,547 ",
+            "out_of_state_tuition": " 12,075 "
+        },
+        {
+            "name": "New College of Florida",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,919 ",
+            "out_of_state_tuition": " 29,944 "
+        },
+        {
+            "name": "North Florida Community College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,179 ",
+            "out_of_state_tuition": " 12,095 "
+        },
+        {
+            "name": "Northwest Florida State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,324 ",
+            "out_of_state_tuition": " 11,634 "
+        },
+        {
+            "name": "Nova Southeastern University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 30,900 ",
+            "out_of_state_tuition": " 30,900 "
+        },
+        {
+            "name": "Palm Beach Atlantic University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 31,450 ",
+            "out_of_state_tuition": " 31,450 "
+        },
+        {
+            "name": "Palm Beach State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,030 ",
+            "out_of_state_tuition": " 10,890 "
+        },
+        {
+            "name": "Pasco-Hernando State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,155 ",
+            "out_of_state_tuition": " 12,032 "
+        },
+        {
+            "name": "Pensacola State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,137 ",
+            "out_of_state_tuition": " 12,593 "
+        },
+        {
+            "name": "Polk State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,367 ",
+            "out_of_state_tuition": " 12,272 "
+        },
+        {
+            "name": "Ringling College of Art and Design",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 46,420 ",
+            "out_of_state_tuition": " 46,420 "
+        },
+        {
+            "name": "Rollins College",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 49,760 ",
+            "out_of_state_tuition": " 49,760 "
+        },
+        {
+            "name": "Saint Johns River State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,240 ",
+            "out_of_state_tuition": " 11,608 "
+        },
+        {
+            "name": "Saint Leo University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 22,280 ",
+            "out_of_state_tuition": " 22,280 "
+        },
+        {
+            "name": "Saint Thomas University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 33,222 ",
+            "out_of_state_tuition": " 33,222 "
+        },
+        {
+            "name": "Santa Fe College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,203 ",
+            "out_of_state_tuition": " 11,487 "
+        },
+        {
+            "name": "Schiller International University",
+            "state": "Florida",
+            "type": "For Profit",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 17,700 ",
+            "out_of_state_tuition": " 17,700 "
+        },
+        {
+            "name": "Seminole State College of Florida",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,131 ",
+            "out_of_state_tuition": " 11,456 "
+        },
+        {
+            "name": "South Florida State College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,136 ",
+            "out_of_state_tuition": " 11,829 "
+        },
+        {
+            "name": "Southeastern University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 25,360 ",
+            "out_of_state_tuition": " 25,360 "
+        },
+        {
+            "name": "St. John Vianney College Seminary",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 21,000 ",
+            "out_of_state_tuition": " 21,000 "
+        },
+        {
+            "name": "St. Petersburg College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,443 ",
+            "out_of_state_tuition": " 11,697 "
+        },
+        {
+            "name": "State College of Florida, Manatee-Sarasota",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,074 ",
+            "out_of_state_tuition": " 11,596 "
+        },
+        {
+            "name": "Stetson University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 46,030 ",
+            "out_of_state_tuition": " 46,030 "
+        },
+        {
+            "name": "Tallahassee Community College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,030 ",
+            "out_of_state_tuition": " 11,460 "
+        },
+        {
+            "name": "Talmudic University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 13,250 ",
+            "out_of_state_tuition": " 13,250 "
+        },
+        {
+            "name": "Trinity Baptist College",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 12,140 ",
+            "out_of_state_tuition": " 12,140 "
+        },
+        {
+            "name": "Trinity College of Florida",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 16,340 ",
+            "out_of_state_tuition": " 16,340 "
+        },
+        {
+            "name": "University of Central Florida",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,368 ",
+            "out_of_state_tuition": " 22,467 "
+        },
+        {
+            "name": "University of Florida",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,381 ",
+            "out_of_state_tuition": " 28,658 "
+        },
+        {
+            "name": "University of Miami",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 50,226 ",
+            "out_of_state_tuition": " 50,226 "
+        },
+        {
+            "name": "University of North Florida",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,394 ",
+            "out_of_state_tuition": " 20,112 "
+        },
+        {
+            "name": "University of South Florida",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,410 ",
+            "out_of_state_tuition": " 17,324 "
+        },
+        {
+            "name": "University of South Florida: Saint Petersburg",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 5,821 ",
+            "out_of_state_tuition": " 16,735 "
+        },
+        {
+            "name": "University of South Florida: Sarasota-Manatee",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 5,587 ",
+            "out_of_state_tuition": " 16,502 "
+        },
+        {
+            "name": "University of Tampa",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 29,208 ",
+            "out_of_state_tuition": " 29,208 "
+        },
+        {
+            "name": "University of West Florida",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 6,360 ",
+            "out_of_state_tuition": " 18,628 "
+        },
+        {
+            "name": "Valencia College",
+            "state": "Florida",
+            "type": "Public",
+            "degree_length": "2 Year",
+            "in_state_tuition": " 3,366 ",
+            "out_of_state_tuition": " 12,828 "
+        },
+        {
+            "name": "Warner University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 21,840 ",
+            "out_of_state_tuition": " 21,840 "
+        },
+        {
+            "name": "Webber International University",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 26,116 ",
+            "out_of_state_tuition": " 26,116 "
+        },
+        {
+            "name": "Yeshiva Gedolah Rabbinical College",
+            "state": "Florida",
+            "type": "Private",
+            "degree_length": "4 Year",
+            "in_state_tuition": " 8,300 ",
+            "out_of_state_tuition": " 8,300 "
         }
     
-    
-    ]}
-    
+]
 
-    
+buildTable(array);
 
-    
-    
+function buildTable(data){
+ var t = document.getElementById('myTab')
+for(var i=0; i<data.length; i++)
+{
+    var row = `<tr>
+        <td>${data[i].name}</td>
+        <td>${data[i].state}</td>
+        <td>${data[i].type}</td>
+        <td>${data[i].degree_length}</td>
+        <td>${data[i].in_state_tuition}</td>
+        <td>${data[i].out_of_state_tuition}</td>
+        </tr>`
+    t.innerHTML +=row
+}
 
 
+}
 </script>
 
 

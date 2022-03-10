@@ -1,0 +1,89 @@
+name	state	type	degree_length	in_state_tuition	out_of_state_tuition
+Adventist University of Health Sciences	Florida	Private	4 Year	15150	15150
+Ave Maria University	Florida	Private	4 Year	20850	20850
+Baptist College of Florida	Florida	Private	4 Year	12300	12300
+Barry University	Florida	Private	4 Year	29850	29850
+Beacon College	Florida	Private	4 Year	39016	39016
+Bethune-Cookman University	Florida	Private	4 Year	14814	14814
+Broward College	Florida	Public	2 Year	3540	11190
+Carlos Albizu University	Florida	Private	4 Year	10234	10234
+Chipola College	Florida	Public	2 Year	3160	8990
+College of Business and Technology: Flagler	Florida	For Profit	2 Year	12222	12222
+College of Business and Technology: Hialeah	Florida	For Profit	2 Year	12222	12222
+College of Business and Technology: Miami Gardens	Florida	For Profit	2 Year	12222	12222
+College of Central Florida	Florida	Public	2 Year	3213	12656
+Daytona State College	Florida	Public	2 Year	3109	11998
+Eastern Florida State College	Florida	Public	2 Year	3140	12193
+Eckerd College	Florida	Private	4 Year	44540	44540
+Edward Waters College	Florida	Private	4 Year	13725	13725
+Embry-Riddle Aeronautical University: Daytona Beach Campus	Florida	Private	4 Year	35814	35814
+Embry-Riddle Aeronautical University: Worldwide Campus	Florida	Private	4 Year	9360	9360
+Everglades University	Florida	Private	4 Year	17145	17145
+Flagler College	Florida	Private	4 Year	18950	18950
+Florida Agricultural and Mechanical University	Florida	Public	4 Year	5827	17768
+Florida Atlantic University	Florida	Public	4 Year	6039	21595
+Florida College	Florida	Private	4 Year	17142	17142
+Florida Gateway College	Florida	Public	2 Year	3100	11747
+Florida Gulf Coast University	Florida	Public	4 Year	6118	25162
+Florida Institute of Technology	Florida	Private	4 Year	41850	41850
+Florida International University	Florida	Public	4 Year	6558	18956
+Florida Keys Community College	Florida	Public	2 Year	3277	13162
+Florida Memorial University	Florida	Private	4 Year	15536	15536
+Florida National University	Florida	For Profit	2 Year	13800	13800
+Florida Southern College	Florida	Private	4 Year	36348	36348
+Florida SouthWestern State College	Florida	Public	2 Year	3401	13944
+Florida State College at Jacksonville	Florida	Public	2 Year	3146	12038
+Florida State University	Florida	Public	4 Year	6516	21683
+Gulf Coast State College	Florida	Public	2 Year	2963	10791
+Hillsborough Community College	Florida	Public	2 Year	3132	11388
+Hobe Sound Bible College	Florida	Private	4 Year	6490	6490
+Hodges University	Florida	Private	4 Year	17600	17600
+Indian River State College	Florida	Public	2 Year	3115	11715
+Jacksonville University	Florida	Private	4 Year	36670	36670
+Johnson & Wales University: North Miami	Florida	Private	4 Year	32091	32091
+Johnson University: Florida	Florida	Private	4 Year	16060	16060
+Keiser University	Florida	Private	4 Year	29920	29920
+Key College	Florida	For Profit	2 Year	11085	11085
+Lake-Sumter State College	Florida	Public	2 Year	3172	13276
+Lynn University	Florida	Private	4 Year	38210	38210
+Miami Dade College	Florida	Public	2 Year	3547	12075
+New College of Florida	Florida	Public	4 Year	6919	29944
+North Florida Community College	Florida	Public	2 Year	3179	12095
+Northwest Florida State College	Florida	Public	2 Year	3324	11634
+Nova Southeastern University	Florida	Private	4 Year	30900	30900
+Palm Beach Atlantic University	Florida	Private	4 Year	31450	31450
+Palm Beach State College	Florida	Public	2 Year	3030	10890
+Pasco-Hernando State College	Florida	Public	2 Year	3155	12032
+Pensacola State College	Florida	Public	2 Year	3137	12593
+Polk State College	Florida	Public	2 Year	3367	12272
+Ringling College of Art and Design	Florida	Private	4 Year	46420	46420
+Rollins College	Florida	Private	4 Year	49760	49760
+Saint Johns River State College	Florida	Public	2 Year	3240	11608
+Saint Leo University	Florida	Private	4 Year	22280	22280
+Saint Thomas University	Florida	Private	4 Year	33222	33222
+Santa Fe College	Florida	Public	2 Year	3203	11487
+Schiller International University	Florida	For Profit	4 Year	17700	17700
+Seminole State College of Florida	Florida	Public	2 Year	3131	11456
+South Florida State College	Florida	Public	2 Year	3136	11829
+Southeastern University	Florida	Private	4 Year	25360	25360
+St. John Vianney College Seminary	Florida	Private	4 Year	21000	21000
+St. Petersburg College	Florida	Public	2 Year	3443	11697
+State College of Florida, Manatee-Sarasota	Florida	Public	2 Year	3074	11596
+Stetson University	Florida	Private	4 Year	46030	46030
+Tallahassee Community College	Florida	Public	2 Year	3030	11460
+Talmudic University	Florida	Private	4 Year	13250	13250
+Trinity Baptist College	Florida	Private	4 Year	12140	12140
+Trinity College of Florida	Florida	Private	4 Year	16340	16340
+University of Central Florida	Florida	Public	4 Year	6368	22467
+University of Florida	Florida	Public	4 Year	6381	28658
+University of Miami	Florida	Private	4 Year	50226	50226
+University of North Florida	Florida	Public	4 Year	6394	20112
+University of South Florida	Florida	Public	4 Year	6410	17324
+University of South Florida: Saint Petersburg	Florida	Public	4 Year	5821	16735
+University of South Florida: Sarasota-Manatee	Florida	Public	4 Year	5587	16502
+University of Tampa	Florida	Private	4 Year	29208	29208
+University of West Florida	Florida	Public	4 Year	6360	18628
+Valencia College	Florida	Public	2 Year	3366	12828
+Warner University	Florida	Private	4 Year	21840	21840
+Webber International University	Florida	Private	4 Year	26116	26116
+Yeshiva Gedolah Rabbinical College	Florida	Private	4 Year	8300	8300
